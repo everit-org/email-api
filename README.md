@@ -1,2 +1,3 @@
 # email-api
-API for handling e-mails in Java.
+
+documentation: http://everit.org/email-api/
