@@ -23,10 +23,18 @@ import org.everit.email.Email;
 public interface EmailSender {
 
   /**
+   * Opens an email sender that might process sending e-mails faster. The {@link BulkEmailSender}
+   * should be closed as soon as all emails are processed from the queue.
+   *
+   * @return A newly opened bulk e-mail sender.
+   */
+  BulkEmailSender openBulkEmailSender();
+
+  /**
    * Sends an email.
    *
    * @param mail
    *          The email.
    */
-  void sendMail(Email mail);
+  void sendEmail(Email mail);
 }
